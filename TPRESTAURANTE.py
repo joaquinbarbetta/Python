@@ -14,7 +14,7 @@ def mostrar_menu():
     for i in range(len(platos)):
         print(str(i + 1) + ". " + platos[i] + " - $" + str(precios_platos[i]))
 
-    print("\nBebidas disponibles:")
+    print("Bebidas disponibles:")
     for i in range(len(bebidas)):
         print(str(i + 1) + ". " + bebidas[i] + " - $" + str(precios_bebidas[i]))
     
@@ -22,17 +22,13 @@ def mostrar_menu():
 def sugerir_comida():
     indice_plato = random.randint(0, len(platos) - 1)
     indice_bebida = random.randint(0, len(bebidas) - 1)
-    print("Sugerencia del chef:")
+    print("Menu del dia:")
     print("Plato: " , platos[indice_plato] , " - $" , str(precios_platos[indice_plato]))
     print("Bebida: " , bebidas[indice_bebida] , " - $" , str(precios_bebidas[indice_bebida]))
 
-def reserva():
 
-
-a=mostrar_menu()
-b=sugerir_comida()
-print(a)
-print(b)
+mostrar_menu()
+sugerir_comida()
 
 plato_num = input("Ingrese el número del plato que desea: ")
 bebida_num = input("Ingrese el número de la bebida que desea: ")
